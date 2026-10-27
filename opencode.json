@@ -1,0 +1,41 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "servers": {
+      
+      "sqlserver": {
+        "command": [
+          "C:\\Projects\\PYTHON\\mcp-sqlserver-readonly\\venv\\Scripts\\python.exe",
+          "C:\\Projects\\PYTHON\\mcp-sqlserver-readonly\\server.py"
+        ],
+        "disabled": false,
+        "environment": {
+          "DB_NAME": "RmanD2",
+          "DB_SERVER": "172.0.1.156",
+          "LINKED_SERVERS": "172.0.2.162",
+          "ALLOWED_DATABASES": "Punidas",
+          "QUERY_TIMEOUT_SECONDS": "60",
+          "QUERY_HARD_TIMEOUT_SECONDS": "70",
+          "PYTHONUNBUFFERED": "1"
+        },
+        "type": "local"
+      }
+    }
+  },
+  "provider": {
+    "omniroute": {
+      "models": {
+        "gemini/gemini-3.1-flash-lite": {
+          "name": "gemini/gemini-3.1-flash(free-omniroute)"
+        }
+      },
+      "name": "OmniRoute",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "apiKey": "sk-446c7c7c86e8ac14-eb56b1-de25329e",
+        "baseURL": "http://localhost:20128/v1"
+      }
+    }
+  },
+  "share": "disabled"
+}
